@@ -593,7 +593,7 @@ textarea:focus, input:focus, select:focus { border-color: var(--ink); outline: n
   .map-box { aspect-ratio: auto; min-height: 320px; }
   .page-hero { padding: 3.5rem 0 2.2rem; }
   .section { padding: 3.2rem 0; }
-  .hero-note { font-size: 1.1rem; max-width: 12ch; right: 2%; bottom: 12%; padding: .5rem .7rem; }
+  .hero-note { font-size: 1.15rem; max-width: 16ch; right: 2%; bottom: 12%; padding: .5rem .7rem; }
   .hero-shuffle { bottom: 2%; }
 
   /* tabelle delle pagine legali: una scheda per riga */

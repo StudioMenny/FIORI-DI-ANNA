@@ -527,9 +527,9 @@ function initFiori() {
 
   // calendario
   $("#calendar").innerHTML = `<table><caption class="sr-only">Mesi in cui ogni fiore è disponibile</caption><thead><tr><th scope="col">Fiore</th>${MESI_BREVI.map((m, i) => `<th scope="col" class="${i + 1 === MONTH ? "cur" : ""}">${m}</th>`).join("")}</tr></thead><tbody>
-    ${FLOWERS.filter(f => f.mesi.length < 12).sort((a, b) => a.mesi[0] - b.mesi[0]).map(f => `<tr><td>${esc(f.nome.split(" (")[0])}</td>${MESI_BREVI.map((m, i) => { const on = f.mesi.includes(i + 1); const col = f.colori[0] === "#ffffff" ? "#e4dcea" : f.colori[0]; return `<td class="${on ? "on" : ""} ${i + 1 === MONTH ? "cur" : ""}" style="--c:${col};--t:${hsl(col)[2] > .62 ? "#2b1633" : "#fff"}"><i class="ini" aria-hidden="true">${m[0]}</i>${on ? `<span title="${esc(f.nome)} a ${MESI[i]}"></span><span class="sr-only">disponibile a ${MESI[i]}</span>` : ""}</td>`; }).join("")}</tr>`).join("")}
+    ${FLOWERS.filter(f => f.mesi.length < 12).sort((a, b) => a.mesi[0] - b.mesi[0]).map(f => `<tr><td>${esc(f.nome.split(" (")[0])}</td>${MESI_BREVI.map((m, i) => { const on = f.mesi.includes(i + 1); const col = hsl(f.colori[0])[2] > .85 ? "#c7b8d3" : f.colori[0]; return `<td class="${on ? "on" : ""} ${i + 1 === MONTH ? "cur" : ""}" style="--c:${col};--t:${hsl(col)[2] > .62 ? "#2b1633" : "#fff"}"><i class="ini" aria-hidden="true">${m[0]}</i>${on ? `<span title="${esc(f.nome)} a ${MESI[i]}"></span><span class="sr-only">disponibile a ${MESI[i]}</span>` : ""}</td>`; }).join("")}</tr>`).join("")}
   </tbody></table>`;
-  $("#always").innerHTML = FLOWERS.filter(f => f.mesi.length === 12).map(f => `<span class="chip" style="--c:${f.colori[0] === "#ffffff" ? "#e4dcea" : f.colori[0]}"><i></i>${esc(f.nome.split(" (")[0])}</span>`).join("");
+  $("#always").innerHTML = FLOWERS.filter(f => f.mesi.length === 12).map(f => `<span class="chip" style="--c:${hsl(f.colori[0])[2] > .85 ? "#c7b8d3" : f.colori[0]}"><i></i>${esc(f.nome.split(" (")[0])}</span>`).join("");
 }
 
 /* ---------- COMPOSIZIONI + CONFIGURATORE ---------- */
