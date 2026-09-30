@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Piante e vasi: prezzi e consigli | Fiori di Anna, Nogara</title>
+<meta name="description" content="Piante da interno e da esterno con prezzo, luce e cure necessarie. Trova la pianta giusta per casa tua, vasi e accessori, e il dottore delle piante.">
+<meta name="theme-color" content="#2b1633">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Piante e vasi: prezzi e consigli | Fiori di Anna, Nogara">
+<meta property="og:description" content="Piante da interno e da esterno con prezzo, luce e cure necessarie. Trova la pianta giusta per casa tua, vasi e accessori, e il dottore delle piante.">
+<meta property="og:image" content="img/og-image.jpg">
+<meta property="og:locale" content="it_IT">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css?v=5">
+</head>
+<body data-page="piante">
+<noscript><p style="padding:1rem;background:#fff3c4;margin:0">Per usare tutti gli strumenti del sito attiva JavaScript. Puoi comunque chiamarci al +39 366 548 8260 o scrivere a studiomenny.web@gmail.com.</p></noscript>
+<main id="main">
+
+<section class="page-hero" data-img="head-piante.jpg">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a> / Piante e vasi</p>
+    <h1>Piante e vasi</h1>
+    <p class="lead">Piante scelte per durare, con tutto quello che serve sapere prima di portarle a casa: quanta luce vogliono, quanta cura, se sono sicure con cani e gatti.</p>
+    
+  </div>
+</section>
+
+<section class="section" style="padding-top:1rem">
+  <div class="wrap">
+    <form class="quiz reveal" id="quiz" onsubmit="return false">
+      <h2 style="font-size:clamp(1.7rem,3.4vw,2.6rem)">Quale pianta fa per te?</h2>
+      <p class="muted">Quattro domande, e le piante qui sotto si mettono in ordine dalla più adatta.</p>
+      <div class="quiz-grid">
+        <fieldset class="step" style="margin:0"><legend>Dove la metti?</legend><div class="opts">
+          <span class="opt"><input type="radio" name="dove" id="q-in" value="interno"><label for="q-in">In casa</label></span>
+          <span class="opt"><input type="radio" name="dove" id="q-out" value="esterno"><label for="q-out">Balcone o giardino</label></span></div></fieldset>
+        <fieldset class="step" style="margin:0"><legend>Quanta luce c'è?</legend><div class="opts">
+          <span class="opt"><input type="radio" name="luce" id="q-l1" value="1"><label for="q-l1">Poca</label></span>
+          <span class="opt"><input type="radio" name="luce" id="q-l2" value="2"><label for="q-l2">Media</label></span>
+          <span class="opt"><input type="radio" name="luce" id="q-l3" value="3"><label for="q-l3">Tanta</label></span></div></fieldset>
+        <fieldset class="step" style="margin:0"><legend>Quanto tempo le dedichi?</legend><div class="opts">
+          <span class="opt"><input type="radio" name="cura" id="q-c1" value="1"><label for="q-c1">Me ne dimentico</label></span>
+          <span class="opt"><input type="radio" name="cura" id="q-c2" value="2"><label for="q-c2">Un po'</label></span>
+          <span class="opt"><input type="radio" name="cura" id="q-c3" value="3"><label for="q-c3">Mi piace curarle</label></span></div></fieldset>
+        <fieldset class="step" style="margin:0"><legend>Hai cani o gatti?</legend><div class="opts">
+          <span class="opt"><input type="radio" name="animali" id="q-a1" value="si"><label for="q-a1">Sì</label></span>
+          <span class="opt"><input type="radio" name="animali" id="q-a2" value="no"><label for="q-a2">No</label></span></div></fieldset>
+      </div>
+      <p id="quiz-msg" aria-live="polite" style="margin:1.2rem 0 0;font-weight:600"></p>
+    </form>
+  </div>
+</section>
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head"><h2>Le nostre piante</h2>
+      <div class="filters" id="tipo" role="group" aria-label="Filtra per tipo" style="gap:.4rem">
+        <button type="button" class="chip" data-tipo="" aria-pressed="true">Tutte</button>
+        <button type="button" class="chip" data-tipo="interno" aria-pressed="false">Da casa</button>
+        <button type="button" class="chip" data-tipo="esterno" aria-pressed="false">Da esterno</button>
+      </div></div>
+    <div class="plants" id="plants"></div>
+  </div>
+</section>
+<section class="section section-tint">
+  <div class="wrap">
+    <div class="section-head"><h2>Vasi e accessori</h2><p class="muted">Il rinvaso lo facciamo noi, gratis, se compri pianta e vaso insieme.</p></div>
+    <div class="vases" id="vases"></div>
+  </div>
+</section>
+<section class="section section-ink">
+  <div class="wrap">
+    <div class="section-head"><h2>Il dottore delle piante</h2><p class="muted">Scegli cosa vedi sulla tua pianta.</p></div>
+    <div class="doctor">
+      <div class="doctor-list" id="doctor-list" role="group" aria-label="Sintomi"></div>
+      <div class="doctor-answer" id="doctor-answer" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+</main>
+<script src="js/data.js?v=5" defer></script>
+<script src="js/app.js?v=5" defer></script>
+</body>
+</html>

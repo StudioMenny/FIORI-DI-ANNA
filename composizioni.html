@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Composizioni e bouquet: prezzi e configuratore | Fiori di Anna, Nogara</title>
+<meta name="description" content="Listino indicativo di bouquet, flower box, centrotavola e composizioni. Componi il tuo mazzo online, vedi l'anteprima e il prezzo, invialo su WhatsApp.">
+<meta name="theme-color" content="#2b1633">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Composizioni e bouquet: prezzi e configuratore | Fiori di Anna, Nogara">
+<meta property="og:description" content="Listino indicativo di bouquet, flower box, centrotavola e composizioni. Componi il tuo mazzo online, vedi l'anteprima e il prezzo, invialo su WhatsApp.">
+<meta property="og:image" content="img/og-image.jpg">
+<meta property="og:locale" content="it_IT">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css?v=5">
+</head>
+<body data-page="composizioni">
+<noscript><p style="padding:1rem;background:#fff3c4;margin:0">Per usare tutti gli strumenti del sito attiva JavaScript. Puoi comunque chiamarci al +39 366 548 8260 o scrivere a studiomenny.web@gmail.com.</p></noscript>
+<main id="main">
+
+<section class="page-hero" data-img="head-composizioni.jpg">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a> / Composizioni</p>
+    <h1>Composizioni e bouquet</h1>
+    <p class="lead">Il listino con le fasce di prezzo e, più sotto, il mazzo che componi tu: lo vedi prendere forma e sai subito quanto costa.</p>
+    <a class="btn btn-season" href="#configuratore">Componi il tuo mazzo</a>
+  </div>
+</section>
+
+<section class="section" id="configuratore" style="scroll-margin-top:80px">
+  <div class="wrap">
+    <div class="section-head"><h2>Componi il tuo mazzo</h2><p class="muted">Usiamo solo fiori di stagione: più freschi e durano di più.</p></div>
+    <div class="builder">
+      <div class="builder-stage" id="builder-stage">
+        <div id="builder-svg"></div>
+        <div class="builder-total">
+          <p class="price" id="b-price" aria-live="polite" style="margin:0"></p>
+          <button class="btn btn-sm btn-light" type="button" id="b-shuffle">Rimescola</button>
+        </div>
+        <div class="btn-row stage-actions" style="padding:.8rem .5rem .3rem">
+          <button class="btn btn-season" type="button" id="b-add">Aggiungi alla richiesta</button>
+          <button class="btn btn-wa" type="button" id="b-wa"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.9 9.9 0 1 1 12 21.8zm8.4-18.3A11.8 11.8 0 0 0 1.8 17.6L.1 24l6.5-1.7A11.8 11.8 0 0 0 23.8 12a11.7 11.7 0 0 0-3.4-8.5z"/></svg>Chiedi su WhatsApp</button>
+        </div>
+        <p class="small muted stage-note" style="padding:0 .5rem;margin:0">Il disegno è un'anteprima: il fiorista compone il mazzo vero con gli steli più belli del giorno.</p>
+      </div>
+      <form id="builder-form" onsubmit="return false">
+        <fieldset class="step"><legend><span>1</span>Per quale occasione?</legend><div class="opts" id="o-occ"></div></fieldset>
+        <fieldset class="step"><legend><span>2</span>Quanto grande?</legend><div class="opts" id="o-size"></div></fieldset>
+        <fieldset class="step"><legend><span>3</span>Che colori?</legend><div class="opts" id="o-pal"></div></fieldset>
+        <fieldset class="step"><legend><span>4</span>Fiori protagonisti, fino a tre</legend><p class="small muted" style="margin:-.3rem 0 .7rem">Se un fiore non esiste nel colore scelto, usiamo la sua tinta più vicina.</p><div class="opts" id="o-fl"></div></fieldset>
+        <fieldset class="step"><legend><span>5</span>Come lo confezioniamo?</legend><div class="opts" id="o-wrap"></div></fieldset>
+        <fieldset class="step"><legend><span>6</span>Qualcosa in più?</legend><div class="opts" id="o-extra"></div></fieldset>
+        <fieldset class="step"><legend><span>7</span>Biglietto e consegna</legend>
+          <label for="card-text" class="small muted">Messaggio sul biglietto (+2 €, scritto a mano)</label>
+          <textarea id="card-text" rows="2" maxlength="160" placeholder="Buon compleanno mamma!"></textarea>
+          <div class="card-preview" id="card-preview" aria-hidden="true"></div>
+          <label for="o-town" class="small muted" style="display:block;margin-top:1.2rem">Ritiro o consegna</label>
+          <select id="o-town" name="town" class="field"></select>
+        </fieldset>
+        <div class="btn-row"><button class="btn btn-light" type="button" id="b-surprise">Sorprendimi</button></div>
+        <div class="btn-row mobile-only" style="margin-top:1rem">
+          <button class="btn btn-season" type="button" onclick="document.getElementById('b-add').click()">Aggiungi alla richiesta</button>
+          <button class="btn btn-wa" type="button" onclick="document.getElementById('b-wa').click()"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.9 9.9 0 1 1 12 21.8zm8.4-18.3A11.8 11.8 0 0 0 1.8 17.6L.1 24l6.5-1.7A11.8 11.8 0 0 0 23.8 12a11.7 11.7 0 0 0-3.4-8.5z"/></svg>Chiedi su WhatsApp</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<section class="section section-tint">
+  <div class="wrap">
+    <div class="section-head"><h2>Listino indicativo</h2><p class="muted">Dal più semplice al più importante. Il prezzo finale dipende dai fiori scelti.</p></div>
+    <div class="price-list" id="price-list"></div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap split">
+    <div>
+      <h2>Come far durare i fiori</h2>
+      <ul class="checks">
+        <li>Taglia i gambi in obliquo di 2 cm appena arrivi a casa.</li>
+        <li>Togli le foglie che finirebbero sott'acqua.</li>
+        <li>Cambia l'acqua ogni due giorni e sciacqua il vaso.</li>
+        <li>Tienili lontano da termosifoni, sole diretto e frutta matura.</li>
+      </ul>
+      <p class="muted">Con ogni mazzo ti diamo la bustina di nutrimento: mettila nella prima acqua.</p>
+    </div>
+    <div class="ph reveal" data-img="cura-fiori.jpg" style="--fb:linear-gradient(135deg,#bfe6ff,#ff8fc7)"></div>
+  </div>
+</section>
+</main>
+<script src="js/data.js?v=5" defer></script>
+<script src="js/app.js?v=5" defer></script>
+</body>
+</html>

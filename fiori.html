@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fiori di stagione | Fiori di Anna, Nogara</title>
+<meta name="description" content="Quali fiori trovi adesso da Fiori di Anna a Nogara: disponibilità mese per mese, colori, significato e prezzo a stelo.">
+<meta name="theme-color" content="#2b1633">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fiori di stagione | Fiori di Anna, Nogara">
+<meta property="og:description" content="Quali fiori trovi adesso da Fiori di Anna a Nogara: disponibilità mese per mese, colori, significato e prezzo a stelo.">
+<meta property="og:image" content="img/og-image.jpg">
+<meta property="og:locale" content="it_IT">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css?v=5">
+</head>
+<body data-page="fiori">
+<noscript><p style="padding:1rem;background:#fff3c4;margin:0">Per usare tutti gli strumenti del sito attiva JavaScript. Puoi comunque chiamarci al +39 366 548 8260 o scrivere a studiomenny.web@gmail.com.</p></noscript>
+<main id="main">
+
+<section class="page-hero" data-img="head-fiori.jpg">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a> / Fiori di stagione</p>
+    <h1>Fiori di stagione</h1>
+    <p class="lead">Ogni mese il banco cambia. Qui vedi cosa c'è adesso, cosa sta finendo e cosa sta per arrivare, con il prezzo a stelo.</p>
+    
+  </div>
+</section>
+
+<section class="section" style="padding-top:1rem">
+  <div class="wrap">
+    <div class="months" id="months" role="group" aria-label="Scegli il mese"></div>
+    <div class="filters">
+      <label class="sr-only" for="f-col">Colore</label><select id="f-col"></select>
+      <label class="sr-only" for="f-tema">Messaggio</label><select id="f-tema"></select>
+      <span class="muted small" id="count" aria-live="polite"></span>
+    </div>
+    <h2 id="month-title" style="font-size:clamp(1.7rem,3.4vw,2.6rem)"></h2>
+    <div class="bench" id="bench"></div>
+    <p class="small muted" style="margin-top:1.5rem">Prezzi indicativi a stelo. La disponibilità dipende dal mercato della settimana: per quantità grandi chiedici qualche giorno prima.</p>
+  </div>
+</section>
+<section class="section section-tint">
+  <div class="wrap">
+    <div class="section-head"><h2>Il calendario dei fiori</h2><p class="muted">Una riga per fiore: i mesi colorati sono quelli in cui lo trovi.</p></div>
+    <div class="calendar" id="calendar"></div>
+    <h3 style="margin-top:2.4rem">Questi ci sono tutto l'anno</h3>
+    <div class="now-strip" id="always"></div>
+  </div>
+</section>
+</main>
+<script src="js/data.js?v=5" defer></script>
+<script src="js/app.js?v=5" defer></script>
+</body>
+</html>
